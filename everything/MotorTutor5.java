@@ -14,9 +14,9 @@ public class MotorTutor5 {
      * @param args
      */
     public static void main(String[] args) {
-        LCD.drawString("Progam 5", 0, 0);
+//         LCD.drawString("Progam 5", 0, 0);
         Button.waitForAnyPress();
-        LCD.clear();
+//         LCD.clear();
         int speed = 720;
         Motor.A.setSpeed(speed);
         Motor.B.setSpeed(speed);
@@ -24,14 +24,14 @@ public class MotorTutor5 {
         Motor.A.rotate(720,true);
         Motor.B.rotate(720,true);
         Motor.C.rotate(720,true);
-        for (int i = 0 ; i < 8 ; i++)
-        {
-            Delay.msDelay(200);
-            LCD.drawInt(Motor.A.getTachoCount(), 0,i);
-            LCD.drawInt(Motor.B.getTachoCount(), 6,i);
-            LCD.drawInt(Motor.A.getTachoCount(), 12,i);
-        }
-        while(Motor.A.isMoving()|| Motor.B.isMoving()||Motor.C.isMoving());
+//         for (int i = 0 ; i < 8 ; i++)
+//         {
+//             Delay.msDelay(200);
+//             LCD.drawInt(Motor.A.getTachoCount(), 0,i);
+//             LCD.drawInt(Motor.B.getTachoCount(), 6,i);
+//             LCD.drawInt(Motor.A.getTachoCount(), 12,i);
+//         }
+//         while(Motor.A.isMoving()|| Motor.B.isMoving()||Motor.C.isMoving());
         Button.waitForAnyPress();
     }
 

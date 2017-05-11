@@ -32,16 +32,29 @@ public class MotorController
     }
     public static void turnleft(int degrees)
     {
-        Motor.C.rotate(degrees);
+        //Button.waitForAnyPress();
+        
+        int speed = 720;
+
+        //Motor.C.rotate(degrees,true);
+        //Motor.C.setSpeed(speed);
+        
+        
+        Motor.B.rotate(degrees,true);
+        Motor.B.setSpeed(speed);
+        //Motor.B.reverseDirection();
+        
+        Button.waitForAnyPress();
     }
     public static void turnRight(int degrees)
     {
+        Motor.B.rotate(-degrees);
         Motor.B.rotate(degrees);
     }
     public static void main (String[] args)
     {
-        moveForward(1000);
-        turnleft(1440); 
-        moveBackward(2000); 
+        //moveForward(1000);
+        turnleft(760);
+        //moveBackward(2000); 
     }
 }
